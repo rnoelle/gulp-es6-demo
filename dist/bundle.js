@@ -1,16 +1,3 @@
-angular.module('devmtnTravel')
-.directive('adventurerCard', function() {
-  return {
-    restrict: 'A',
-    templateUrl: '../views/adventureCard.html',
-    scope: {
-      img: '@',
-      title: '@',
-      summary: '@'
-    }
-  }
-})
-
 angular.module('devmtnTravel', ['ui.router'])
     .config(function ($stateProvider, $urlRouterProvider) {
         $stateProvider
@@ -52,6 +39,19 @@ angular.module('devmtnTravel', ['ui.router'])
         $urlRouterProvider
             .otherwise('/');
     });
+
+angular.module('devmtnTravel')
+.directive('adventurerCard', function() {
+  return {
+    restrict: 'A',
+    templateUrl: '../views/adventureCard.html',
+    scope: {
+      img: '@',
+      title: '@',
+      summary: '@'
+    }
+  }
+})
 
 angular.module('devmtnTravel')
 .controller('contactCtrl', function($scope) {
